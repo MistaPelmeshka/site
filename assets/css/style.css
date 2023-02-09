@@ -179,6 +179,24 @@ body{
     line-height: 37px;
     color: black !important;
 }
+a.btn_hov svg path{
+  /*   transform: rotate(-15deg); */
+    transition: .3s ease-in-out;
+}
+a.btn_hov:hover svg path{
+    animation: svg1 1.3s infinite;
+}
+@keyframes svg1 {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(-3px);
+    }
+}
 .box_by{
     position: relative;
 }
@@ -419,6 +437,257 @@ footer .copyright{
 .phone_header{
     font-size: 1.9em;
 }
+
+
+/* Контакты */
+
+.heading_bg{
+    background: url(../img/o-nas-photo.jpg);
+    position: relative;
+}
+.heading_bg::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: #000000d1;
+}
+
+.tpl-kontakty h1,
+.tpl-page h1{
+    position: relative;
+}
+.tpl-kontakty h1::before,
+.tpl-page h1::before{
+    content: "---";
+    color: var(--secondary_text);
+    position: absolute;
+    top:calc(50% - 0.6em);
+    font-size: 0.8em;
+    left: 0; 
+}
+.bread_crumbs a{
+    text-decoration: none;
+    color: #ffffff;
+    transition: .2s ease-in-out;
+}
+.bread_crumbs a:hover{
+    color:var(--secondary_text)
+}
+.active_crumbs a{
+    color: var(--secondary_text);
+}
+.active_crumbs a:hover{
+    color:#ffffff;
+}
+.kontakty{
+    background: #011f2963;
+    border: 1px dashed rgba(247, 225, 3, 0.7);
+    border-radius: 16px;
+}
+.tpl-page h3,
+.kontakty h3{
+    color: white;
+    position: relative;
+}
+.tpl-page h3::before,
+.kontakty h3::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 35px;
+    border-left: 3px dashed var(--secondary_text);
+    left: -14px;
+    top: 0;
+}
+.kontakty ul{
+    list-style: none;
+    padding: 0;
+}
+.kontakty ul li a{
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    color: white;
+    padding: 5px;
+    margin: 5px 0;
+    font-size: calc(1em + 0.2vw);
+}
+.kontakty ul li a svg{
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+.kontakty ul li a:hover{
+    color: var(--secondary_text);
+}
+.kontakty ul li svg{
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+}
+.kontakty ul li{
+   /*  padding: 5px; */
+    margin: 5px 0;
+}
+.kontakty ul li span{
+    font-size: calc(1em + 0.2vw);
+}
+.formBX input{
+    background: #44595f;
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    color: #ffffff;
+    letter-spacing: 1.1px;
+}
+.formBX textarea{
+    max-height: 200px;
+    min-height: 60px;
+    height: 116px;
+  
+    background: #44595f;
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    color: #ffffff;
+    letter-spacing: 1.1px;
+}
+.formBX input::placeholder,
+.formBX textarea::placeholder{
+    color: #ababab;
+}
+.formBX textarea{
+    font-size: 0.8em;
+}
+input:focus,
+textarea:focus {
+    outline:none;
+}
+.formBX .btn-warning_cust_zakaz{
+    font-size: 1em;
+}
+
+
+/* для статей - новостей */
+.papper_box .menu_text{
+    background: #011f2963;
+    border-radius: 16px;
+    top:120px;
+}
+.menu_box ul {
+    padding: 0;
+}
+.menu_box ul li{
+    list-style: none;
+}
+.menu_box ul li a{
+    text-decoration: none;
+    transition: .2s ease-in-out;
+    color: #ffffff;
+    display: block;
+    padding: 5px 5px 5px 10px;
+    margin: 2px;
+}
+.menu_box ul li a:hover{
+    color: var(--secondary_text);
+    background:#011f2963;
+    border-radius: 16px;
+}
+.menu_box ul li a.current-menu-item {
+    background:#011f2963;
+    border-radius: 16px;
+    color: var(--secondary_text);
+}
+.menu_box ul li a.current-menu-item:hover{
+    color:#ffffff;
+}
+.papper_box .papper_text{
+    background: #011f2963;
+    border-radius: 16px;
+}
+.papper_box .papper_text h4,
+.papper_box .papper_text h5,
+.papper_box .papper_text h6{
+    position: relative;
+}
+.papper_box .papper_text h4::before,
+.papper_box .papper_text h5::before,
+.papper_box .papper_text h6::before{
+    content:'---';
+    position: absolute;
+    left: -13px;
+    bottom: -12px;
+    color: var(--secondary_text);
+}
+.papper_box .papper_text img{
+    max-width: 100%;
+    height: auto;
+}
+.papper_box .papper_text a{
+    color: var(--secondary_text);
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
+.papper_box .papper_text a:hover{
+    color: #ffffff;
+}
+.coll-form-page .form_block{
+    background: #011f2963;
+    padding: 10px;
+    border-radius: 16px;
+}
+
+
+/* категории */
+.card{
+    background: #011f2963;
+    border: 1px dashed rgba(247, 225, 3, 0.7);
+    border-radius: 16px;
+}
+.card a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.card h2{
+    color: var(--secondary_text);
+    font-size: calc(1.7em);
+    padding-left:0px;
+}
+.card h2::before{
+    content: none;
+}
+.card .img_card{
+    max-height: 135px;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .fs-6_cust {
+    font-size: .9rem!important;
+}
+@media (min-width: 1200px){
+    .col-xl-9_cust{
+        flex: 0 0 auto;
+        width: 81%;
+    }
+}
+@media (min-width: 992px){
+    .col-lg-8_cust {
+        flex: 0 0 auto;
+        width: 72.666667%;
+    }
+}
+@media (min-width: 1400px){
+    .col-xxl-10_cust {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+    }
+}
+
 @media (max-width:1797px) {
     .news_Box h2{
         margin-top: 50px !important;
@@ -479,6 +748,14 @@ footer .copyright{
     }
     footer .copyright p{
         padding: 15px 0 !important;
+    }
+    .tpl-kontakty h1::before{
+        content: "---";
+        left: -10px;
+    }
+    .social_box{
+        text-align: center;
+        justify-content: center;
     }
 }
 @media (max-width:704px) {
@@ -546,13 +823,13 @@ footer .copyright{
         max-width: 200px;
     }
     .box_by img {
-        top: -26px;
+        top: -23px;
         transform: translateX(-141px) rotate(-5deg);
-        max-width: 295px;
+        max-width: 280px;
     }
     .btn-warning_cust {
         font-size: 1em;
-        line-height: 35px;
+        line-height: 28px;
     }
     .btn-warning_cust svg{
         width:22px;
@@ -561,6 +838,7 @@ footer .copyright{
     .phone_header{
         font-size: 1.15em;
     }
+
 }
 @media (max-width:515px) {
     footer .copyright p{
